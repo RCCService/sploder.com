@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+   <allow-access-from domain="192.168.2.51" />
+   <allow-access-from domain="sploder.home" />
+   <allow-access-from domain="*.sploder.com" />
+   <allow-access-from domain="sploder.s3.amazonaws.com" />
+</cross-domain-policy>

@@ -1,0 +1,111 @@
+<div class="mprof">
+	<div class="mprofgroup mprofvcard">
+		<a href="/games/members/{%username%}/"><img class="mprofavatar96" src="{%avatar_96%}" border="0" width="96" height="96" alt="{%username%}" /></a>
+		<div class="mprofvitals">
+			<h2><a href="/games/members/{%username%}/">{%username%}</a></h2>
+			<div class="mprofstatus">
+				<!-- <img src="https://sploder.net/status.php?u={%username%}" width="80" height="25" alt="online status" /> -->
+				<img src="/chrome/role_{%badge_editor%}.gif" width="24" height="28" alt="{%badge_editor%}" title="{%badge_editor%}" />
+				<img src="/chrome/role_{%badge_reviewer%}.gif" width="24" height="28" alt="{%badge_reviewer%}" title="{%badge_reviewer%}" />
+				<img src="/chrome/role_{%badge_moderator%}.gif" width="24" height="28" alt="{%badge_moderator%}" title="{%badge_moderator%}" />
+			</div>
+			<dl>
+				<dt><strong>Level</strong></dt>
+				<dd><strong>{%rank%}</strong></dd>
+				<dt>Joined:</dt>
+				<dd>{%creation_date_nice%}</dd>
+				<dt>Last visit:</dt>
+				<dd>{%last_login_time_nice%}</dd>
+			</dl>
+			<div>{%social%}</div>
+			<!-- <div class="mprofloc"><img src="https://sploder.net/images/flags/png/{%location%}.png" width="16" height="11" alt="{%location%}" /></div> -->
+		</div>
+	</div>
+	<div class="{%profile_visibility%}">
+		<div class="mprofgroup">
+			<div class="mprofchart mprofmain" title="Awesomeness ({%chart_quality%}%) - computed using a secret recipe">
+				<img src="https://chart.apis.google.com/chart?chf=bg,lg,90,000000,0,333333,1&amp;chxr=0,0,100&amp;chxs=0,CCCCCC,11.5,0,l,CCCCCC&amp;chxt=y&amp;chs=210x116&amp;cht=gm&amp;chco=CCCCCC,CC00CC|FFEC00&amp;chd=t:{%chart_quality%}&amp;chls=4|4" width="210" height="116" alt="{%chart_quality%}" />
+				<p>Awesomeness</p>
+			</div>
+			<div class="mprofcount" title="total games/featured games">
+				<div class="stat">{%total_games%}{%total_games_featured%} <span>Games</span></div>
+			</div>
+			<div class="mprofcount mprofend">
+				<div class="stat">{%total_friends%} <span>Friends</span></div>
+			</div>
+
+			<div class="mprofchart" title="Average difficulty, all games combined">
+				<img src="https://chart.apis.google.com/chart?chf=bg,lg,90,000000,0,333333,1&amp;chxr=0,0,10&amp;chxs=0,CCCCCC,8,0,2,CCCCCC&amp;chxt=y&amp;chs=140x70&amp;cht=gm&amp;chco=CCCCCC,00FF00|FFFF00|FF9900|FF0000&amp;chd=t:{%chart_diff%}&amp;chxl=0:|EASY|INSANE&amp;chls=4|4" width="140" height="70" alt="{%chart_diff%}" />
+				<p>Difficulty</p>
+			</div>
+			<div class="mprofchart mprofend" title="Average votes, from all players">
+				<img src="https://chart.apis.google.com/chart?chf=bg,lg,90,000000,0,333333,1&amp;chxr=0,0,100&amp;chxs=0,CCCCCC,11.5,0,2,CCCCCC&amp;chxt=y&amp;chs=140x70&amp;cht=gm&amp;chco=CCCCCC,000099|FF00FF&amp;chd=t:{%chart_votes%}&amp;chxl=0:|meh|EPIC&amp;chls=4|4" width="140" height="70" alt="{%chart_votes%}" />
+				<p>Feedback</p>
+			</div>
+			<div class="mprofstat mprofmain" title="Total views for all games combined">
+				<div class="stat">{%total_game_views_nice%}</div>
+				<p>Total Plays</p>
+			</div>
+			<div class="mprofstat" title="Average play time per game play">
+				<div class="stat">{%average_time_spent_nice%}</div>
+				<p>Play Time</p>
+			</div>
+			<div class="mprofstat mprofend" title="Total Votes Received from other players">
+				<div class="stat">{%total_votes_received_nice%}</div>
+				<p>Total Votes</p>
+			</div>
+			<div class="spacer">&nbsp;</div>
+		</div>
+
+		{%editable_content%}
+
+		<div class="mprofgroup mprofsection">
+			<h4><a href="#" onclick="setClass('mprof_activity', 'shown'); return false;" title="Things this member has accomplished">Actions</a></h4>
+			<div class="mprofcontent hidden" id="mprof_activity">
+				<dl class="mprofdata">
+					<dt>Votes cast:</dt>
+					<dd>{%total_votes_cast%}</dd>
+					<dt>Comments made:</dt>
+					<dd>{%total_comments_made%} <a href="/messages/?creator={%username%}">view &raquo;</a></dd>
+					<dt>Vote average:</dt>
+					<dd style="position: relative; width: 96px; height: 24px; background-color: #666;" title="Average vote this member has cast on others' games">
+						<div style="background: #ffec00; width: {%average_vote_cast_width%}px; height: 24px;">&nbsp;</div>
+						<div style="width: 96px; height: 24px; position: absolute; top: 0; left: 0; z-index: 2; background-image: url('/chrome/starmask.png');">&nbsp;
+						</div>
+					</dd>
+					<dt>Tributes made:</dt>
+					<dd>{%total_tributes_made%}</dd>
+					<dt>Group Memberships:</dt>
+					<dd>{%group_memberships%}</dd>
+					<dt>Group Ownerships:</dt>
+					<dd>{%group_ownerships%}</dd>
+				</dl>
+				<div class="spacer">&nbsp;</div>
+			</div>
+		</div>
+
+		<div class="mprofgroup mprofsection">
+			<h4><a href="#" onclick="setClass('mprof_reactions', 'shown'); return false;" title="How other members react to this member.">Reactions</a></h4>
+			<div class="mprofcontent hidden" id="mprof_reactions">
+				<dl class="mprofdata">
+					<dt>5-star faves:</dt>
+					<dd>{%total_games_favorited%}</dd>
+					<dt>Comments received:</dt>
+					<dd>{%total_comments_received%}</dd>
+					<dt>Favorites <span style="color: #ff6666;">&hearts;</span>:</dt>
+					<dd>{%total_likes%}</dd>
+					<dt>Tributes received:</dt>
+					<dd>{%total_tributes_received%}</dd>
+					<dt>Comment rating:</dt>
+					<dd>{%average_comment_value%}</dd>
+					<dt>Contests won:</dt>
+					<dd>{%total_contests_won%}</dd>
+				</dl>
+				<div class="spacer">&nbsp;</div>
+			</div>
+		</div>
+
+		{%reviews_content%}
+
+	</div>
+</div>
